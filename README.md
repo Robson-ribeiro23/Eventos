@@ -1,2 +1,0 @@
-# Eventos
-Projeto acelera - enari
