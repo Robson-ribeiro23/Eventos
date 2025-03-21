@@ -17,6 +17,9 @@ namespace Acelera2025
         {
             InitializeComponent();
             panel1.Resize += panel1_Resize;
+
+            cadastrarUsuario.LinkClicked += usuarioLabel_Click;
+            cadastrarEmpresa.LinkClicked += empresaLabel_Click;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -69,6 +72,20 @@ namespace Acelera2025
         {
             PrincipalInicial principal = new PrincipalInicial();
             principal.Show();
+            this.Hide();
+        }
+
+        private void usuarioLabel_Click(object sender, EventArgs e)
+        {
+            CadastrarUsuario cadastrar = new CadastrarUsuario();
+            cadastrar.Show();
+            this.Hide();
+        }
+
+        private void empresaLabel_Click(object sender, EventArgs e)
+        {
+            CadastrarEmpresa cadastrar = new CadastrarEmpresa();
+            cadastrar.Show();
             this.Hide();
         }
     }
